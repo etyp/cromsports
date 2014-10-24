@@ -3,6 +3,8 @@
 <script src="bower_components/foundation/js/foundation.min.js"></script>
 <script src="bower_components/chartjs/Chart.min.js"></script>
 
+<script src="js/main.js"></script>
+
 
 </body>
 </html>
