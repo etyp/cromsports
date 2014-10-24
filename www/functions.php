@@ -43,7 +43,40 @@ class DbDriver {
      * Querying functions
      */
 
-    public function getAll($tableName = false, $columns = "*", $asArray = true) {
+    public function getYardsPerQb() {
+        // open db
+        $conn = $this->dbConnect();
+
+        // Build query string params for query
+
+
+        // Build query string
+        $query = "
+            WHATEVER MYSQL YOO WANT
+            ";
+
+        // Query db
+        $results = mysqli_query($conn, $query);
+
+        // Loop thru results
+        $returnResults = array();
+        while ($row = mysqli_fetch_array($results)) {
+            // add items to returnResults like this:
+
+            // $returnResults[] = $row["whatever u want here"];
+        }
+
+
+
+        // close db
+        $this->dbClose();
+
+
+        // Return results
+        return $returnResults;
+    }
+
+    public function getAll($tableName = false, $columns = "*", $asArray = true, $limit) {
         if ($tableName) {
             // Connect to db
             $conn = $this->dbConnect();
@@ -61,10 +94,17 @@ class DbDriver {
                 $colString = "*";
             }
 
+            if ($limit) {
+                $limitString = "LIMIT " . $limit;
+            }
+            else {
+                $limitString = "";
+            }
+
 
             // Build query
             $query = "
-            SELECT $colString FROM $tableName ORDER BY DEFENSIVE_TOTAL_TACKLES DESC LIMIT 10;
+            SELECT $colString FROM $tableName ORDER BY DEFENSIVE_TOTAL_TACKLES DESC $limitString;
             ";
 
             // Query db
