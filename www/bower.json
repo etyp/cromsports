@@ -1,0 +1,25 @@
+{
+  "name": "cromsports",
+  "version": "0.0.1",
+  "homepage": "https://github.com/typ90/cromsports",
+  "authors": [
+    "Eric Typaldos <etypaldos@pappasgroup.com>"
+  ],
+  "description": "A sports dashboard app",
+  "main": "index.php",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "chartjs": "~0.2.0",
+    "jquery": "~2.1.1",
+    "underscore": "~1.7.0",
+    "foundation": "~5.4.6",
+    "handlebars": "~2.0.0"
+  }
+}
