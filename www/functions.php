@@ -82,7 +82,8 @@ class DbDriver {
                     $resultsArray[] = $row;
                 }
                 else {
-                    $output .= $row["name"] . "<br>";
+                    // TODO figure something out here ??
+                    //$output .= $row["name"] . "<br>";
                 }
             }
 

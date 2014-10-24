@@ -55,6 +55,9 @@
             type: "GET",
             dataType: 'json',
             url: "/ajax.php",
+            data: {
+                tableToQuery: "sacks"
+            },
             beforeSend: function() {
             },
             success: function(response) {
